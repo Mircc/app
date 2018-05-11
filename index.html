@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "" ""><HTML manifest2="/cache.manifest"><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<META http-equiv="X-UA-Compatible" content="IE=edge"> <TITLE>极品双拼域名出售</TITLE> 
+<META name="renderer" content="webkit"> 
+<META name="viewport" content="width=device-width, initial-scale=1.0"> <LINK 
+href="./bootstrap.min.css" rel="stylesheet"> 
+<SCRIPT src="./vue.min.js"></SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<DIV class="container" id="app">
+<P></P>
+<DIV class="alert alert-success" role="alert">
+<P class="lead">好的事业从一个好域名开始</P>
+<P class="lead text-right">—— 鲁迅</P></DIV><NAV class="navbar navbar-light"><A 
+class="navbar-brand" href="https://daji.app">.APP 域名</A>	 </NAV>	 
+<DIV class="table-responsive">
+<TABLE class="table table-striped">
+  <THEAD>
+  <TR>
+    <TH scope="col">#</TH>
+    <TH scope="col">域名</TH>
+    <TH scope="col">释义</TH>
+    <TH scope="col">状态</TH>
+    <TH scope="col" v-if="!mobi()">PING</TH></TR></THEAD>
+  <TBODY>
+  <TR v-for="(d, i) in app">
+    <TH scope="row">{{i + 1}}</TH>
+    <TD>{{d[0]}}</TD>
+    <TD>{{d[1]}}</TD>
+    <TD>{{d[2] ? '已出' : '可售'}}</TD>
+    <TD v-if="!mobi()" v-bind:domain="d[0]"></TD></TR></TBODY></TABLE></DIV><NAV 
+class="navbar navbar-light"><A class="navbar-brand" 
+href="https://daji.app/#">.COM 域名</A>	 </NAV>	 
+<DIV class="table-responsive">
+<TABLE class="table table-striped">
+  <THEAD>
+  <TR>
+    <TH scope="col">#</TH>
+    <TH scope="col">域名</TH>
+    <TH scope="col">释义</TH>
+    <TH scope="col">状态</TH>
+    <TH scope="col" v-if="!mobi()">PING</TH></TR></THEAD>
+  <TBODY>
+  <TR v-for="(d, i) in com">
+    <TH scope="row">{{i + 1}}</TH>
+    <TD>{{d[0]}}</TD>
+    <TD>{{d[1]}}</TD>
+    <TD>{{d[2] ? '已出' : '可售'}}</TD>
+    <TD v-if="!mobi()" v-bind:domain="d[0]"></TD></TR></TBODY></TABLE></DIV><NAV 
+class="navbar navbar-light"><A class="navbar-brand" 
+href="https://aibang.app/#">带价咨询</A>	 </NAV>		 
+<DIV class="row mb-3">
+<DIV class="col">
+<DIV class="card">
+<DIV class="card-body">
+<H6 class="text-secondary">E-Mail</H6>
+<H5>Aniu.z#qq.com</H5></DIV></DIV></DIV>
+<DIV class="col">
+<DIV class="card">
+<DIV class="card-body">
+<H6 class="text-secondary">WeChat</H6>
+<H5>Aniu.z</H5></DIV></DIV></DIV></DIV>
+<HR>
+<FOOTER class="text-center">
+<P class="text-muted">Aniu.z ©</P></FOOTER></DIV><CODE hidden="analysis">
+<SCRIPT type="text/javascript">
+var app = new Vue({
+	el: '#app',
+	data: {
+		app: [
+			['diji.app','大吉、妲己',''],
+			['tuzhi.app','图纸、土制',''],
+		],
+		com: [
+			['fojikang.com','富嵇康',''],
+		]
+	},
+	methods : {
+	
+		mobi: function(){
+			return /(iPhone|iPad|iPod|Android)/i.test( navigator.userAgent );
+		},
+	
+		ping: function(s, n) {
+			function t() {
+				var e = new Date - r;
+				n && n(e);
+			}
+			function e(){
+				n && n('-');
+			}
+			this.img = new Image;
+			var r = new Date;
+			this.img.onload = t, this.img.src = s;
+			this.img.onerror = e;
+		},
+	
+		test: function( ret ){
+		
+			var self = this;
+		
+			for( var x = 0; x < ret.length; x++ ){
+			
+				(function( dom ){
+				
+					var src = '//' + dom + '/favicon.ico';					
+					self.ping( src, function(e) {
+						document.querySelector('[domain="'+ dom +'"]').innerHTML = e;
+					});
+				
+				})( ret[x][0] );
+			
+			}
+			
+		}
+	},
+	mounted : function(){
+		if( !this.mobi() ){
+			this.test( this.app );
+			this.test( this.com );		
+		}
+	}
+});
+
+/////////////////
+
+var _hmt = _hmt || [];
+
+</SCRIPT>
+ </CODE> </BODY></HTML>
